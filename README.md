@@ -19,3 +19,12 @@ Use Windows Task Scheduler to run this automatically.
 has detailed instructions on how to do so. Just use the path to this program's
 executable in place of the path to PowerShell and `light` or `dark` in place of
 the PowerShell arguments.
+
+## How It Works
+This works by setting the registry key
+`Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize\AppsUseLightTheme`
+to `0` for dark or `1` for light.
+
+## Future Plans
+Add a feature to create the Task Scheduler tasks using
+[Task Scheduler Managed Wrapper](https://github.com/dahall/taskscheduler).
